@@ -25,7 +25,7 @@ for hex_str in datas:
     temp = int( val[22:24],16 )
     v1 +=str(val)[24:26] + " "
 
-    kwatts = int( val[24:28],16 )/100
+    kWh = int( val[24:28],16 )/100
     v1 +=str(val)[26:30] + " "
 
     # Constant 19?
@@ -37,7 +37,7 @@ for hex_str in datas:
     data["session"]=startCounter
     data["second"]=secs
     data["temp"]=temp
-    data["kwatts"]=kwatts
+    data["kWh"]=kWh
     data["pulses"]=pulses
     data["liters"]=round( pulses/2560, 2)
     data["liters_rounded"]=round( pulses/2560 )
